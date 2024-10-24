@@ -254,4 +254,4 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ### OLS
 
-![](figs/smell_optimal2.png){#smell_optimal2 fig-align="center" width="80%"} 
+![](figs/smell_optimal2.png){#smell_optimal2 fig-align="center" width="80%"}  
