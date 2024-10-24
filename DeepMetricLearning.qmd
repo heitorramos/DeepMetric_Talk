@@ -60,9 +60,9 @@ a subcategory of supervised learning where a function maps the input to an outpu
 :::{.column width="50%"} -->
 ![](figs/dog.png){#dog fig-align="center" width="70%"}
 <!-- :::
-
+ 
 ::: -->
-
+ 
 ## Classification
 
 ![](figs/laranja_maca.png){#laranja fig-align="center"}
@@ -79,7 +79,7 @@ a subcategory of supervised learning where a function maps the input to an outpu
 ## Features and Classification
 
 ![](figs/features_classification.png){#features_class fig-align="center"}
-
+ 
 
 ## Supervised Learning
 
@@ -102,9 +102,9 @@ Our model learn the features?
 ![](figs/metric_learning.png)
 
 ## Different notions of similarity
+ 
 
-
-![](figs/different_similarities.png){#similaries fig-align="center" width`="80%"}
+![](figs/different_similarities.png){#similaries fig-align="center" width="80%"}
 
 ## Metric Space
 
