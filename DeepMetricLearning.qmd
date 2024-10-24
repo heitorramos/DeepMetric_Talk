@@ -32,7 +32,7 @@ format:
         }
         </style>
     style: common/style.css
-    footer: <https://heitorramos.github.io/>
+    footer: <https://www.dcc.ufmg.br/~ramosh/>
 # search: true
 # resources:
 #   - aula06.pdf
@@ -58,7 +58,9 @@ a subcategory of supervised learning where a function maps the input to an outpu
 <!-- :::
 
 :::{.column width="50%"} -->
-![](figs/dog.png){#dog fig-align="center" width="70%"}
+
+![](figs/dog.png){#dog fig-align="center"}
+
 <!-- :::
  
 ::: -->
@@ -200,234 +202,56 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ![](figs/schemaDM.png){#schema fig-align="center" width="90%"}
 
-<!-- ## Créditos
-:::{.callout-important}
-Os slides desse curso são fortemente baseados no curso do Fabrício Murai e do Erickson Nascimento
-::: -->
 
-<!-- ## Objetivos de Aprendizagem{.scrollable}
+## Deep Metric Learning
 
-1. Conhecer a definição de *embedding* se algumas aplicações
-2. Saber calcular normas vetoriais 1,2, $\infty$, $p$ e $S$ (onde $S$ é uma matriz definida positiva)
-3. Conhecer as propriedades das normas vetoriais
-4. Saber normalizar um vetor
-5. Conhecer a geometria das normas vetoriais 
+![](figs/arrange1.png){#arrange fig-align="center" width="90%"}
 
-## Referências
-- Wikipedia
-    - [Normas vetoriais](https://en.wikipedia.org/wiki/Norm_(mathematics))
-    - [Normas matriciais](https://en.wikipedia.org/wiki/Norm_(mathematics))
-- Youtube
-    - [Chad Higdon-Topaz](https://en.wikipedia.org/wiki/Norm_(mathematics))
 
-## Onde usar normas vetoriais?{.scrollable}
+## Deep Metric Learning
 
-- Normas vetoriais são associadas a **tamanhos** e a **distâncias**
-- Existem várias aplicações em que queremos medir a (dis-)similaridade entre objetos. Em geral, isso é feito em 2 passos:
-    - Passo 1: representar objetos como vetores. Estes vetores são conhecidos como ***embeddings***
-    - Passo 2: calcular distância entre ***embeddings***
+![](figs/arrange2.png){#arrange2 fig-align="center" width="90%"}
 
-## Embeddings (representação vetorial)
-![Vetores com 26 dimensões projetados no “melhor” espaço de dimensão 2](figs/Aula05/embeddings_song.png)
+## Deep Metric Learning
 
-::: aside 
-Almeida, M.A.D., Vieira, C.C., Melo, P.O.S.V.D. and Assunção, R.M., 2019. Random Playlists Smoothly Commuting Between Styles. ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), 15(4), pp.1-20.
-:::
+![](figs/arrange3.png){#arrange3 fig-align="center" width="90%"}
 
-## Embeddings (representação vetorial) {.scrollable}
-![Objetivo: gerar playlists que passem de um estilo a outro de forma SUAVE.
-Playlists devem ser aleatórias, diferentes a cada dia.](figs/Aula05/embeddings_songs_2.png)
+## Deep Metric Learning
 
-<!-- ::: aside 
-Almeida, M.A.D., Vieira, C.C., Melo, P.O.S.V.D. and Assunção, R.M., 2019. Random Playlists Smoothly Commuting Between Styles. ACM Transactions on Multimedia Computing, Communications, and Applications (TOMM), 15(4), pp.1-20.
-::: -->
+![](figs/arrange3.png){#arrange4 fig-align="center" width="90%"}
 
-<!-- ## Norma de vetor em $\mathbb R^2$ e $\mathbb R^3$
+## Deep Metric Learning
 
-![Normas em $\mathbb R^2$ e $\mathbb R^3$](figs/Aula05/norma_r2_r3.png)
+![](figs/arrange5.png){#arrange5 fig-align="center" width="100%"}
 
-## Norma de vetor em  $\mathbb R^n$
+## Deep Metric Learning
 
-$$x = (x_1,x_2,\ldots,x_n)^\top$$ 
+![](figs/arrange6.png){#arrange6 fig-align="center" width="100%"}
 
-$$\Vert x \Vert = \sqrt{x_1^2 + x_2^2 + \ldots + x_n^n}$$
+## Our approach
 
-$$\Vert x \Vert = \sqrt{x^\top x}$$
+![SMELL](figs/smell.png){#smell fig-align="center" width="100%"}
 
+## SMELL
 
-## Exemplo {.scrollable}
+- SMELL tends to approximate the objects in the S-Space around their respective markers as well as re-position the markers according to vectors position.
 
-$$u = \begin{bmatrix}0\\-1\\2\\-2\\4\end{bmatrix} \text{ e } v = \begin{bmatrix}i\\2\\1+i\\0\\1-i\end{bmatrix}$$
+:::{.panel-tabset}
 
-$$\Vert u \Vert = \sqrt{u^\top u} = \sqrt{0+1+4+4+16} = 5 $$
+### S-space
+![](figs/smell_markers.png){#smell_markers fig-align="center" width="100%"}
 
-$$\Vert v \Vert = \sqrt{v^* v} = \sqrt{1+4+2+0+2} = 3 $$
+### S-space (Traning)
+![](figs/smell_traning.png){#smell_training fig-align="center" width="100%"}
 
-## Propriedades{.scrollable}
-- A definição de norma euclidiana garante que para todos os escalares $\alpha$
+### Inference
 
-$$\Vert x\Vert \ge 0 \text{, } \Vert x\Vert = 0 \Leftrightarrow x =0 \text{ e } \Vert \alpha x\Vert = \vert \alpha\vert \, \Vert x \Vert$$
+![](figs/smell_inference.png){#smell_inference fig-align="center" width="40%"}
 
-:::{.callout-important}
-## Normalização do vetor
-Dado um vetor $x \ne 0$, é frequentemente conveniente termos outro vetor que aponta para a mesma direção que $x$ mas apresenta comprimento unitário. Para isso, **normalizamos** o vetor
+### Latent Space
 
-$$\lVert u\rVert = \left\lVert\frac{x}{\lVert x\rVert} \right\rVert= \frac{1}{\lVert x\rVert} \lVert x\rVert = 1$$
+![](figs/smell_optimal1.png){#smell_optimal1 fig-align="center" width="60%"}
 
-:::
+### OLS
 
-## Intuição do produto interno
-
-:::{.columns}
-
-:::{.column width="70%"}
-$$ a^\top b = \Vert a \Vert \Vert b\Vert \cos(\theta)$$
-
-O comprimento da projeção ortogonal de um vetor $a$ sobre o vetor $b$ é
-
-$$ \Vert a\Vert \cos(\theta) = a^\top \frac{b}{\Vert b\Vert}$$
-:::
-
-:::{.column width="30%"}
-![](figs/Aula05/projecao2.svg.png)
-:::
-
-:::
-
-## Desigualdade de Cauchy-Schwarz {.scrollable}
-
-$$ | x^\top y| = \Vert x \Vert \Vert y \Vert |\cos(\theta)| \le \Vert x \Vert \Vert y \Vert$$
-
-
-Teorema da Desigualdade Triangular
-
-$$ \Vert x+y\Vert \le \Vert x \Vert + \Vert y\Vert \text{, para todo $x,y$}$$ 
-
-vamos elevar os dois lados ao quadrado, temos
-$$(\Vert x+y\Vert)^2 \le (\Vert x \Vert + \Vert y\Vert)^2 \le \Vert x\Vert^2 + 2\Vert x\Vert \Vert y\Vert + \Vert y\Vert^2$$
-\begin{align}\Vert v\Vert^2 &= (\sqrt{v^\top v})^2\\ &= (x+y)^\top (x+y) \\ &= \Vert x\Vert^2 + 2x^\top y+\Vert y\Vert^2 \\ &\le \Vert x\Vert^2 + 2\vert x^\top y\vert + \Vert y\Vert^2 \\&\le \Vert x\Vert^2 + 2\Vert x\Vert \Vert y\Vert + \Vert y\Vert^2
-\end{align}
-
-## Distância entre dois vetores {.scrollable}
-
-\begin{align} d(p,q) = d(q,p) &= \sqrt{(q_1 - p_1)^2 + \ldots + (q_n - p_n)^2} \\ &= \sqrt{\sum_{i=1}^n (q_i-p_i)^2}\end{align}
-
-- Caso Bidimensional 
-![Distância](figs/Aula06/dist_bidimensional.png){width="150%"}
-
-## Outras distâncias{.scrollable}
-Manhattan distance (norma L1)
-
-![Manhatan vs Euclidian](figs/Aula06/manhattan_distance.png){width="50%"}
-
-## Norma L1
-
-$$\Vert x \Vert_1 = \vert x_1\vert + \vert x_2 \vert + \ldots + \vert x_n\vert$$
-
-Caso bi-dimensional:
-
-$$\Vert (x,y) \Vert_1 = \vert x\vert + \vert y\vert$$
-
-$$d(x,y) = \vert x_1 - y_1 \vert + \ldots + \vert x_n - y_n\vert$$
-
-## Norma
-
-- Quando algo pode ser considerado uma função de distância ou tamanho de vetores?
-- Quando não teremos contradição?
-- Que propriedades valem para uma norma (válida) qualquer?
-
-:::{.callout}
-Matemáticos possuem uma definição genérica de norma que vale também para outras situações além de matrizes
-:::
-
-## Norma: definição
-
-:::{.callout-note}
-## Norma de um vetor (definição geral)
-
-A norma para um espaço vetorial $\mathcal V$ real ou complexo é uma função $\Vert \star \Vert$ que mapeia $\mathcal V$ em $\mathbb R$ e que satisfaz as seguintes condições
-
-- $\Vert x \Vert \ge 0 \text{ e } \Vert x \Vert =0 \Leftrightarrow x = 0$
-- $\Vert \alpha x\Vert = \vert \alpha \vert \Vert x\Vert$ para todos escalares $\alpha$
-- $\Vert x+y\Vert \le \Vert x \Vert + \Vert y \Vert$.
-
-:::
-
-## Norma L2 e Lp{.scrollable}
-
-Generalizando:
-
-- $\Vert x \Vert_1 = \sqrt[1]{\sum_{i=1}^n \vert x_i \vert^1}$
-
-- $\Vert x \Vert_2 = \sqrt{\sum_{i=1}^n \vert x_i \vert^2}$
-
-- $\Vert x \Vert_p = \sqrt[p]{\sum_{i=1}^n \vert x_i \vert^p}$
-
-- $\Vert x \Vert_\infty = \max_i \vert x_i\vert$
-
-:::{.callout-tip}
-## Falhas
-
-$p=0$ não é uma norma válida pois $\Vert 2v\Vert_0 = \Vert v \Vert_0$, que viola a propriedade da multiplicação por um escalar.
-
-$p<1$ também não é norma. Ex: $p=1/2$ falha na desigualdade triangular pois $(1,0)$ e $(0,1)$ têm norma 1, mas a soma $(1,1)$ teria norma $2^{1/p}=4>2$. Apenas $1\le p\le \infty$ produz normas aceitáveis $\Vert v \Vert_p$ 
-:::
-
-## Exemplo
-
-Calcular as normas 1, 2 e $\infty$ do vetor $x = \begin{bmatrix}2 &-3& 1\end{bmatrix}^\top$
-
-$$ \Vert x\Vert_1 = \vert 2\vert + \vert -3\vert +\vert 1 \vert =6$$
-
-$$ \Vert x\Vert_2 = \sqrt{\vert 2\vert^2 + \vert -3\vert^2 +\vert 1 \vert^2}= \sqrt{14} \approx 3,7417$$
-
-$$ \Vert x\Vert_\infty = \max{\vert 2\vert + \vert -3\vert +\vert 1 \vert} =  3$$
-
-
-## Pontos a igual distância de $(0,0)$
-
-As normas induzem geometrias distintas
-
-![](figs/Aula06/norm_geometry.png) 
-
-## Para quê normas diferentes?
-
-- Às vezes é fácil provar um resultado usando uma definição de distância, mas é impossível usando outra
-
-  - Por exemplo, poderia ser fácil mostrar que L1 ou L$_\infty$ de um vetor decresce para zero
-  - Mas queremos mesmo é que sua norma L2 vá para zero
-  - Mas isso será verdade!
-
-## Para quê normas diferentes?{.scrollable}
-
-
-- Todas as normas $\mathbb R^n$ são equivalentes, ou seja, se $\Vert \cdot \Vert_\alpha$ e $\Vert \cdot \Vert_\beta$ são normas no $\mathbb R^n$, então existem constantes positivas $k_1$ e $k_2$, tais que
-$$ k_1\Vert x\Vert_\alpha \le \Vert x \Vert_\beta \le k_2\Vert x\Vert_\alpha,$$
-para todo $x\in \mathbb R^2$, particularmente,
- $$\Vert x\Vert_2 \le \Vert x\Vert_1 \le \sqrt n \Vert x\Vert_2$$
-
- $$ \Vert x \Vert_\infty \le \Vert x\Vert_2 \le \sqrt n \Vert x\Vert_\infty$$
-
- $$\Vert x\Vert_\infty \le \Vert x \Vert_1 \le n \Vert x \Vert_\infty$$
-
- - Se $\Vert x\Vert_1$ for pequena, $\Vert x \Vert_2$ será pequena também
-
-
-## Propriedades com Lp
-
-Normas Lp possuem as mesmas propriedades que vimos antes
-
-- $\Vert x \Vert_p \ge 0 \text{ e } \Vert x \Vert_p =0 \Leftrightarrow x = 0$
-- $\Vert \alpha x\Vert_p = \vert \alpha \vert \Vert x\Vert_p$ para todos escalares $\alpha$
-- $\Vert x+y\Vert_p \le \Vert x \Vert_p + \Vert y \Vert_p$
-
-<!-- Se $p>1$, $q>1$ com $\frac{1}{p} + \frac{1}{q} = 1$, então
-
-$$\vert x^\top y\vert \le \Vert x\Vert_p \Vert y\Vert_p$$ -->
-
-
-<!-- ## Uma razão menos teórica
-
-Vamos querer o menor vetor $(w_1, w_2)$ que pertença a um certo conjunto
-![](figs/Aula06/Norma_menor_vetor.png) 
--->
+![](figs/smell_optimal2.png){#smell_optimal2 fig-align="center" width="80%"}
