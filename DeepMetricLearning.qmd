@@ -87,9 +87,24 @@ is a machine learning task that involves mapping inputs to outputs based on exam
 
 ![](figs/supervised.png){#supervised fig-align="center"}
 
+
+
 ## What if?
 
+:::{.callout-important}
+Our model learn the features?
+:::
 
+![](figs/deep-learning-model.png){#deeplearningmodel fig-align="center"}
+
+## We want more than representation learning
+
+![](figs/metric_learning.png)
+
+## Different notions of similarity
+
+
+![](figs/different_similarities.png){#similaries fig-align="center" width`="80%"}
 
 ## Metric Space
 
@@ -111,25 +126,79 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ## Distance notion
 
-![Quais os valores mais extremos?](figs/pressao2.png){#pressao fig-align="center" width="50%"}
+:::{.panel-tabset}
+
+### What is extreme?
+![](figs/pressao2.png){#pressao fig-align="center" width="50%"}
 
 
-## Distance notion
+<!-- ## Distance notion -->
 
-![Quais os valores mais extremos?](figs/distancia_pressao2.png){#pressao2 fig-align="center" width="50%"}
+### Not Euclidean
 
-## Equidistant points
+![](figs/distancia_pressao2.png){#pressao2 fig-align="center" width="50%"}
+
+<!-- ## Equidistant points -->
+### Equidistant
 
 ![](figs/distancia_centro.png){#equidistant fig-align="center" width="50%"}
 
-## Equidistant points
+<!-- ## Equidistant points -->
+
+### Equidistant 2
 
 ![](figs/elipse.png){#equidistant2 fig-align="center" width="50%"}
 
-## Equidistant points
+<!-- ## Equidistant points -->
+
+### Equidistant 3
 
 ![](figs/distancias.png){#equidistant3 fig-align="center" width="50%"}
 
+:::
+
+## What distance are we talking about?
+
+:::{.incremental}
+:::{.callout-important}
+- Mahalanobis
+:::
+
+- $$D(\boldsymbol x, \boldsymbol y) = \sqrt{(\boldsymbol x-\boldsymbol y)^\top \Sigma^{-1} (\boldsymbol x - \boldsymbol y)}$$
+:::
+## A little  linear algebra
+
+- Remember that $\Sigma$ is a **semi**-positive matrix
+- We can rearrange $\Sigma^{-1} = W^\top W$
+- and rearrange the Mahalanobis distance as $$D(\boldsymbol x, \boldsymbol y) = \Vert W\boldsymbol x- W \boldsymbol y\Vert_2$$
+
+![](figs/transformacaoLinear.png){#linear fig-align="center"}
+
+## Metric Learning main goal
+
+- Learn semantic relations between data points
+
+- Ideia: Learn a mapping function that:
+  - Semantic relation $\rightarrow$ (Pseudo) Metric distances
+
+![](figs/dml_goal.png){#goal fig-align="center" width="60%"}
+
+## In a nutshell
+
+- Step 1 - Choose a parameterized embedding function $\Psi(\cdot)$
+
+- Step 2 - Pick a distance measure $\Delta$ for the embedding space, e.g. $\Delta(\Psi(x, y)) \rightarrow$ Euclidean distance
+
+- Step 3 - Define data $D$ and similarity rules:
+  - $S = \{(x, y) \mid x, y \text{ are similar}\}$
+
+  - $D = \{(x, y) \mid x, y \text{ are dissimilar}\}$
+
+  - $T = \{(x, y, z) \mid x  \text{ is more similar to }  y \text{ than to }z\}$
+
+## In a nutshell
+
+![](figs/schemaDM.png){#schema fig-align="center" width="90%"}
 
 <!-- ## Créditos
 :::{.callout-important}
