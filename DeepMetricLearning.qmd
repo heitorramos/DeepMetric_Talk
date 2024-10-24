@@ -239,10 +239,10 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 :::{.panel-tabset}
 
 ### S-space
-![](figs/smell_markers.png){#smell_markers fig-align="center" width="100%"}
+![](figs/smell_markers.png){#smell_markers fig-align="center" width="80%"}
 
 ### S-space (Traning)
-![](figs/smell_traning.png){#smell_training fig-align="center" width="100%"}
+![](figs/smell_traning.png){#smell_training fig-align="center" width="80%"}
 
 ### Inference
 
