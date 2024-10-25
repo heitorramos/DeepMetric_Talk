@@ -117,8 +117,8 @@ Is a non-empty set together with a notion of distance between its elements. The 
 an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $𝑀$, i.e., a function $d: M\times M \rightarrow \mathbb R$, satisfying for all  $x,y \in M$
 
 1. The distance from a point to itself is zero: $𝑑(𝑥,𝑥)=0$
-2. (positivity) the distance between two points is always positive: if $𝑥\ne 𝑦$ then $𝑑(𝑥,𝑦)>0$
-3. (Symmetry) the distance from $𝑥$ to $𝑦$ is always the same as the distance from $𝑦$ to $𝑥$: $𝑑(𝑥,𝑦)=𝑑(𝑦,𝑥)$
+2. the distance between two points is always positive: if $𝑥\ne 𝑦$ then $𝑑(𝑥,𝑦)>0$
+3. the distance from $𝑥$ to $𝑦$ is always the same as the distance from $𝑦$ to $𝑥$: $𝑑(𝑥,𝑦)=𝑑(𝑦,𝑥)$
 4. The triangle innequality holds: $𝑑(𝑥,𝑧)\leq 𝑑(𝑥,𝑦)+𝑑(𝑦,𝑧)$
 
 ## Metric examples
