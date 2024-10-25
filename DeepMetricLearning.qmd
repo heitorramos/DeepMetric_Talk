@@ -114,7 +114,7 @@ Is a non-empty set together with a notion of distance between its elements. The 
 
 ## Formally, a metric space is
 
-an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $𝑀$, i.e., a function $d: M\times M \rightarrow \mathbb R$, satisfying for all  $x,y \in M$
+an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $𝑀$, i.e., a function $d: M\times M \rightarrow \mathbb R^+$, satisfying for all  $x,y \in M$
 
 1. The distance from a point to itself is zero: $𝑑(𝑥,𝑥)=0$
 2. the distance between two points is always positive: if $𝑥\ne 𝑦$ then $𝑑(𝑥,𝑦)>0$
@@ -142,19 +142,19 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 <!-- ## Equidistant points -->
 ### Equidistant
 
-![](figs/distancia_centro.png){#equidistant fig-align="center" width="50%" .lightbox}
+![](figs/distancia_centro.png){#equidistant fig-align="center" width="60%" .lightbox}
 
 <!-- ## Equidistant points -->
 
 ### Equidistant 2
 
-![](figs/elipse.png){#equidistant2 fig-align="center" width="50%" .lightbox}
+![](figs/elipse.png){#equidistant2 fig-align="center" width="70%" .lightbox}
 
 <!-- ## Equidistant points -->
 
 ### Equidistant 3
 
-![](figs/distancias.png){#equidistant3 fig-align="center" width="50%" .lightbox}
+![](figs/distancias.png){#equidistant3 fig-align="center" width="70%" .lightbox}
 
 :::
 
