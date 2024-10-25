@@ -448,8 +448,8 @@ is a machine learning task that involves mapping inputs to outputs based on exam
 <p>an ordered pair <span class="math inline">\((𝑀,𝑑)\)</span>, where <span class="math inline">\(𝑀\)</span> is a set and <span class="math inline">\(d\)</span> is a metric on <span class="math inline">\(𝑀\)</span>, i.e., a function <span class="math inline">\(d: M\times M \rightarrow \mathbb R\)</span>, satisfying for all <span class="math inline">\(x,y \in M\)</span></p>
 <ol type="1">
 <li>The distance from a point to itself is zero: <span class="math inline">\(𝑑(𝑥,𝑥)=0\)</span></li>
-<li>(positivity) the distance between two points is always positive: if <span class="math inline">\(𝑥\ne 𝑦\)</span> then <span class="math inline">\(𝑑(𝑥,𝑦)&gt;0\)</span></li>
-<li>(Symmetry) the distance from <span class="math inline">\(𝑥\)</span> to <span class="math inline">\(𝑦\)</span> is always the same as the distance from <span class="math inline">\(𝑦\)</span> to <span class="math inline">\(𝑥\)</span>: <span class="math inline">\(𝑑(𝑥,𝑦)=𝑑(𝑦,𝑥)\)</span></li>
+<li>the distance between two points is always positive: if <span class="math inline">\(𝑥\ne 𝑦\)</span> then <span class="math inline">\(𝑑(𝑥,𝑦)&gt;0\)</span></li>
+<li>the distance from <span class="math inline">\(𝑥\)</span> to <span class="math inline">\(𝑦\)</span> is always the same as the distance from <span class="math inline">\(𝑦\)</span> to <span class="math inline">\(𝑥\)</span>: <span class="math inline">\(𝑑(𝑥,𝑦)=𝑑(𝑦,𝑥)\)</span></li>
 <li>The triangle innequality holds: <span class="math inline">\(𝑑(𝑥,𝑧)\leq 𝑑(𝑥,𝑦)+𝑑(𝑦,𝑧)\)</span></li>
 </ol>
 </section>
@@ -1325,7 +1325,7 @@ is a machine learning task that involves mapping inputs to outputs based on exam
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+    <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":false,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
