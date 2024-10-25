@@ -39,15 +39,21 @@ format:
 ---
 
 ## Artificial Intelligence
-Artificial intelligence (sometimes referred to by the acronym AI) is the science that studies the modeling of human-like intelligence exhibited by machines or software.
 
-## Artificial Intelligence
-
-![](figs/IA.png)
+![](figs/IA.png){.lightbox}
 
 ## Artificial Intelligence (Deep Learning Book)
 
-![](figs/deep_learning-IA.png){#ia fig-align="center"}
+![](figs/deep_learning-IA.png){#ia fig-align="center" width="40%" .lightbox}
+
+## Feature
+
+
+- A feature is a characteristic that describes an object. 
+
+- Any attribute of an object can be treated as a feature, whether it is a number, text, date, boolean, etc
+
+![](figs/features.png){#features fig-align="center" .lightbox}
 
 ## Classification
 <!-- :::{.columns}
@@ -59,35 +65,28 @@ a subcategory of supervised learning where a function maps the input to an outpu
 
 :::{.column width="50%"} -->
 
-![](figs/dog.png){#dog fig-align="center"}
+![](figs/dog.png){#dog fig-align="center" .lightbox}
 
 <!-- :::
  
 ::: -->
  
-## Classification
+<!-- ## Classification
 
-![](figs/laranja_maca.png){#laranja fig-align="center"}
-
-## Feature
+![](figs/laranja_maca.png){#laranja fig-align="center" .lightbox} -->
 
 
-- A feature is a characteristic that describes an object. 
 
-- Any attribute of an object can be treated as a feature, whether it is a number, text, date, boolean, etc
+<!-- ## Features and Classification
 
-![](figs/features.png){#features fig-align="center"}
-
-## Features and Classification
-
-![](figs/features_classification.png){#features_class fig-align="center"}
+![](figs/features_classification.png){#features_class fig-align="center" .lightbox} -->
  
 
-## Supervised Learning
+<!-- ## Supervised Learning
 
 is a machine learning task that involves mapping inputs to outputs based on examples of input-output pairs.
 
-![](figs/supervised.png){#supervised fig-align="center"}
+![](figs/supervised.png){#supervised fig-align="center" .lightbox} -->
 
 
 
@@ -97,16 +96,16 @@ is a machine learning task that involves mapping inputs to outputs based on exam
 Our model learn the features?
 :::
 
-![](figs/deep-learning-model.png){#deeplearningmodel fig-align="center"}
+![](figs/deep-learning-model.png){#deeplearningmodel fig-align="center" width="40%" .lightbox}
 
 ## We want more than representation learning
 
-![](figs/metric_learning.png)
+![](figs/metric_learning.png){fig-align="center" width="70%" .lightbox}
 
 ## Different notions of similarity
  
 
-![](figs/different_similarities.png){#similaries fig-align="center" width="80%"}
+![](figs/different_similarities.png){#similaries fig-align="center" width="80%" .lightbox}
 
 ## Metric Space
 
@@ -115,7 +114,7 @@ Is a non-empty set together with a notion of distance between its elements. The 
 
 ## Formally, a metric space is
 
-an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $𝑀$, i.e., a function $d: M\times M \rightarrow \mathbb R$, satisfying for all points $x,y \in M$
+an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $𝑀$, i.e., a function $d: M\times M \rightarrow \mathbb R$, satisfying for all  $x,y \in M$
 
 1. The distance from a point to itself is zero: $𝑑(𝑥,𝑥)=0$
 2. (positivity) the distance between two points is always positive: if $𝑥\ne 𝑦$ then $𝑑(𝑥,𝑦)>0$
@@ -124,38 +123,38 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ## Metric examples
 
-![](figs/metric_examples.png){#metrics fig-align="center" width="50%"}
+![](figs/metric_examples.png){#metrics fig-align="center" width="50%" .lightbox}
 
 ## Distance notion
 
 :::{.panel-tabset}
 
 ### What is extreme?
-![](figs/pressao2.png){#pressao fig-align="center" width="50%"}
+![](figs/pressao2.png){#pressao fig-align="center" width="50%" .lightbox}
 
 
 <!-- ## Distance notion -->
 
 ### Not Euclidean
 
-![](figs/distancia_pressao2.png){#pressao2 fig-align="center" width="50%"}
+![](figs/distancia_pressao2.png){#pressao2 fig-align="center" width="50%" .lightbox}
 
 <!-- ## Equidistant points -->
 ### Equidistant
 
-![](figs/distancia_centro.png){#equidistant fig-align="center" width="50%"}
+![](figs/distancia_centro.png){#equidistant fig-align="center" width="50%" .lightbox}
 
 <!-- ## Equidistant points -->
 
 ### Equidistant 2
 
-![](figs/elipse.png){#equidistant2 fig-align="center" width="50%"}
+![](figs/elipse.png){#equidistant2 fig-align="center" width="50%" .lightbox}
 
 <!-- ## Equidistant points -->
 
 ### Equidistant 3
 
-![](figs/distancias.png){#equidistant3 fig-align="center" width="50%"}
+![](figs/distancias.png){#equidistant3 fig-align="center" width="50%" .lightbox}
 
 :::
 
@@ -174,7 +173,7 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 - We can rearrange $\Sigma^{-1} = W^\top W$
 - and rearrange the Mahalanobis distance as $$D(\boldsymbol x, \boldsymbol y) = \Vert W\boldsymbol x- W \boldsymbol y\Vert_2$$
 
-![](figs/transformacaoLinear.png){#linear fig-align="center"}
+![](figs/transformacaoLinear.png){#linear fig-align="center" .lightbox}
 
 ## Metric Learning main goal
 
@@ -183,7 +182,7 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 - Ideia: Learn a mapping function that:
   - Semantic relation $\rightarrow$ (Pseudo) Metric distances
 
-![](figs/dml_goal.png){#goal fig-align="center" width="60%"}
+![](figs/dml_goal.png){#goal fig-align="center" width="60%" .lightbox}
 
 ## In a nutshell
 
@@ -200,37 +199,37 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ## In a nutshell
 
-![](figs/schemaDM.png){#schema fig-align="center" width="90%"}
+![](figs/schemaDM.png){#schema fig-align="center" width="90%" .lightbox}
 
 
 ## Deep Metric Learning
 
-![](figs/arrange1.png){#arrange fig-align="center" width="90%"}
+![](figs/arrange1.png){#arrange fig-align="center" width="90%" .lightbox}
 
 
 ## Deep Metric Learning
 
-![](figs/arrange2.png){#arrange2 fig-align="center" width="90%"}
+![](figs/arrange2.png){#arrange2 fig-align="center" width="90%" .lightbox}
 
 ## Deep Metric Learning
 
-![](figs/arrange3.png){#arrange3 fig-align="center" width="90%"}
+![](figs/arrange3.png){#arrange3 fig-align="center" width="90%" .lightbox}
 
 ## Deep Metric Learning
 
-![](figs/arrange3.png){#arrange4 fig-align="center" width="90%"}
+![](figs/arrange3.png){#arrange4 fig-align="center" width="90%" .lightbox}
 
 ## Deep Metric Learning
 
-![](figs/arrange5.png){#arrange5 fig-align="center" width="100%"}
+![](figs/arrange5.png){#arrange5 fig-align="center" width="100%" .lightbox}
 
 ## Deep Metric Learning
 
-![](figs/arrange6.png){#arrange6 fig-align="center" width="100%"}
+![](figs/arrange6.png){#arrange6 fig-align="center" width="100%" .lightbox}
 
 ## Our approach
 
-![SMELL](figs/smell.png){#smell fig-align="center" width="100%"}
+![SMELL](figs/smell.png){#smell fig-align="center" width="100%" .lightbox}
 
 ## SMELL
 
@@ -239,19 +238,153 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 :::{.panel-tabset}
 
 ### S-space
-![](figs/smell_markers.png){#smell_markers fig-align="center" width="80%"}
+![](figs/smell_markers.png){#smell_markers fig-align="center" width="80%" .lightbox}
 
 ### S-space (Traning)
-![](figs/smell_traning.png){#smell_training fig-align="center" width="70%"}
+![](figs/smell_traning.png){#smell_training fig-align="center" width="70%" .lightbox}
 
 ### Inference
 
-![](figs/smell_inference.png){#smell_inference fig-align="center" width="40%"}
+![](figs/smell_inference.png){#smell_inference fig-align="center" width="40%" .lightbox}
 
 ### Latent Space
 
-![](figs/smell_optimal1.png){#smell_optimal1 fig-align="center" width="60%"}
+![](figs/smell_optimal1.png){#smell_optimal1 fig-align="center" width="60%" .lightbox}
 
 ### OLS
 
-![](figs/smell_optimal2.png){#smell_optimal2 fig-align="center" width="80%"}  
+![](figs/smell_optimal2.png){#smell_optimal2 fig-align="center" width="80%" .lightbox}  
+
+### Scheme
+
+![](figs/smell_metric_learning_schem.png){#smell_optimal2 fig-align="center" width="80%" .lightbox}  
+
+:::
+## Theoretical properties
+
+:::{.panel-tabset}
+
+### Conditions for OLS
+
+In S-space, given $k$ positive markers in the set $M^+$ and $n-k$ negative markers in  $M^-$, if the latent space found by SMELL, i.e., the estimation of the parameters $\Theta$ of  $f_\Theta$, generates an optimal latent space then $\exists\; \boldsymbol \mu_i \in M^+$ so that $||\mu_i||_2^2 <  ||\mu_j||_2^2$ for any $\boldsymbol \mu_j \in M^-$.
+
+### Misclassification Risk
+
+For S-spaces built with one marker in each group, $\mu^+ \in M^+$ and $\mu^-\in M^-$, $D^-$ and $D^+$ being the Euclidean distance of an object to the negative and positive marker, respectively, the misclassification risk function of a positive marker is derived analytically.
+:::
+
+## Examples with real-world datasets
+
+![](figs/sonar-LS.png){#sonar fig-align="center" width="80%" .lightbox}  
+
+## Examples with real-world datasets
+
+![](figs/sonar_LS_S.png){#sonar fig-align="center" width="80%" .lightbox}  
+
+
+## Examples with real-world datasets
+
+::: {layout-ncol=2}
+![](figs/plot_4_sem_seixo.png){#mnist fig-align="center" width="70%" .lightbox} 
+
+![](figs/h_ij_4.png){#mnist2 width="100%" fig-align="center" .lightbox}  
+:::
+
+## Results with real-world datasets
+![](figs/results_28.png){#results fig-align="center" width="70%" .lightbox} 
+
+## Application (Malware detection)
+
+![](figs/malware.png){#malware fig-align="center" width="100%" .lightbox} 
+
+
+## Application (Malware detection)
+
+![](figs/nosso_sim_scheme_completo_final.drawio.png){#smalware fig-align="center" width="80%" .lightbox} 
+
+## Application (Malware detection)
+
+![](figs/malware_LS_S.png){#smalwareLS_S fig-align="center" width="100%" .lightbox} 
+
+## Application (Malware detection - ZSL)
+
+
+![](figs/all_metric_bar_all.png){#zsl fig-align="center" width="70%" .lightbox} 
+
+## Ongoing work
+
+![](figs/FL.png){#FL fig-align="center" width="100%" .lightbox} 
+
+## Inference ability
+
+:::{.panel-tabset}
+
+### inference ability
+![](figs/infability.png){#globecom_ia fig-align="center" width="80%" .lightbox} 
+
+### Association with Loss
+![](figs/loss_vs_k.png){#globecom fig-align="center" width="60%" .lightbox} 
+
+:::
+## Smell inferece ability
+
+![](figs/resultado_globecom.png){#Resglobecom fig-align="center" width="100%" .lightbox} 
+
+
+## Sendentarism detection
+
+:::{layout-ncol="2"}
+![](figs/sed1.png){#sed1 fig-align="center" width="100%" .lightbox} 
+
+![](figs/sed2.png){#sed2 fig-align="center" width="100%" .lightbox} 
+:::
+
+## Sendentarism detection
+
+![](figs/sedentary.png){#sed fig-align="center" width="100%" .lightbox} 
+
+## Uncertainty quantification
+
+- Uncertainty quantification is important in machine learning because it provides a measure of confidence or reliability in the predictions made by a model
+
+
+- Uncertainty quantification is important in federated learning because federated learning involves training a model across multiple devices or servers, each with potentially different data distributions and levels of noise
+
+
+
+## Why do we need uncertainty quantification?
+
+:::{.panel-tabset}
+### Overconfidence
+
+![](figs/overconfidence.png){#over fig-align="center" width="80%" .lightbox} 
+
+### Example
+![](figs/uncertainty.png){#unc fig-align="center" width="90%" .lightbox} 
+
+:::
+
+## How to quantify uncertainty?
+
+![](figs/baeysian.png){#bayes fig-align="center" width="100%" .lightbox} 
+
+- we desire to move from $\Pr(y\mid x,\Theta) = \text{softmax}(f(x))$
+- to $\Pr(y\mid x,\Theta) = \mathbb{E_\Theta}(f(x))$
+
+## Final remarks
+
+- Metric Learning enables effective modeling of semantic relationships
+
+- SMELL approach provides robust performance:
+Demonstrated competitive results across many datasets and a variety of applications
+
+- Effective in handling both malware detection and federated learning use cases
+
+- Capturing semantic similarity remains a key challenge and a vital direction for future research
+
+## Future (some of them ongoing) work
+
+- Finish to equip SMELL with BNN framework
+- Explore better SMELL's theoretical properties
+
+![](figs/marker_trajectory.png){#trajc fig-align="center" width="60%" .lightbox} 
