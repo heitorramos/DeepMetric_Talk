@@ -249,7 +249,7 @@ an ordered pair $(𝑀,𝑑)$, where $𝑀$ is a set and $d$ is a metric on $�
 
 ### Latent Space
 
-![](figs/smell_optimal1.png){#smell_optimal1 fig-align="center" width="60%" .lightbox}
+![](figs/smell_optimal1.png){#smell_optimal1 fig-align="center" width="50%" .lightbox}
 
 ### OLS
 
