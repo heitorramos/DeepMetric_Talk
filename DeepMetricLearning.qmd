@@ -382,7 +382,7 @@ Demonstrated competitive results across many datasets and a variety of applicati
 
 - Capturing semantic similarity remains a key challenge and a vital direction for future research
 
-## Future (some of them ongoing) work
+## Future (some of the ongoing) work
 
 - Finish to equip SMELL with BNN framework
 - Explore better SMELL's theoretical properties
